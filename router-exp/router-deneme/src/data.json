@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "marka": "fiat",
+        "model": "anlamam 1",
+        "fiyat": 50001,
+        "yas": 15 
+    },
+    {
+        "id": 2,
+        "marka": "volkswagen",
+        "model": "anlamam 2",
+        "fiyat": 300001,
+        "yas": 10
+    },
+    {
+        "id": 3,
+        "marka": "bmw",
+        "model": "anlamam 3",
+        "fiyat": 5054343,
+        "yas": 1
+    },
+    {
+        "id": 4,
+        "marka": "fiat",
+        "model": "anlamam 5",
+        "fiyat": 50021,
+        "yas": 9
+    },
+    {
+        "id": 5,
+        "marka": "porshe",
+        "model": "anlamam 5",
+        "fiyat": 150001,
+        "yas": 5 
+    }
+]
