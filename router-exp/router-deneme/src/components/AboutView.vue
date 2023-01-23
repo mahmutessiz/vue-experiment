@@ -1,10 +1,14 @@
 <script>
-import data from "../data.json"
+import data from "../data/data.json"
+import dataDeneme from "../data/deneme.json"
 
-export default{
+
+
+export default {
     data() {
         return {
-            carData : data, 
+            carData: data,
+            denemeData: dataDeneme,
         }
     },
 }
@@ -27,4 +31,9 @@ export default{
         </ul>
     </div>
 
+    <!-- xxxxxxxxxx  Bu kısımda başka bir json dosyasına data göndermek istedim. yapamadım. daha sonra tekrar geleceğim. -->
+     <button @click="addValue">Add Value</button>
+
 </template>
+
+
