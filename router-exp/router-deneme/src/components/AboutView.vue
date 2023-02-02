@@ -1,6 +1,6 @@
 <script>
 import data from "../data/data.json"
-import dataDeneme from "../data/deneme.json"
+
 
 
 
@@ -8,7 +8,7 @@ export default {
     data() {
         return {
             carData: data,
-            denemeData: dataDeneme,
+            
         }
     },
 }
