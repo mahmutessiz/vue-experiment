@@ -1,8 +1,12 @@
 <script>
-import JSConfetti from 'js-confetti'
+import JSConfetti from 'js-confetti';
+import App from "@App.vue";
 
 
 export default {
+    components:{
+        App,
+    },
     data() {
         return {
             onOf: false,
@@ -52,7 +56,7 @@ export default {
     <br><br><br>
 
 
-
+<App/>
 
 
 </template>
