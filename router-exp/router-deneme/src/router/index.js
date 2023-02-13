@@ -4,7 +4,7 @@ import AboutView from "../components/AboutView.vue";
 import HomeView from "../components/HomeView.vue";
 
 const router= createRouter({
-    history : createWebHistory(import.meta.env.BASE_URL),
+    history : createWebHistory("https://vue-experiment-rho.vercel.app/"),
     routes: [
         {
             path: "/",
