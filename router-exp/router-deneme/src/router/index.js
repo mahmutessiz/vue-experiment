@@ -5,7 +5,7 @@ import HomeView from "../components/HomeView.vue";
 import App from "../App.vue";
 
 const router= createRouter({
-    history : createWebHistory(import.meta.env.BASE_URL),
+    history : createWebHistory("_redirect"),
     routes: [
         {
             path: "/",
