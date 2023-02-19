@@ -1,6 +1,6 @@
 <script>
 import data from "../data/data.json"
-
+import deneme from "../deneme.js";
 
 
 
@@ -8,8 +8,12 @@ export default {
     data() {
         return {
             carData: data,
+            deneme1: deneme,
             
         }
+    },
+    mounted() {
+        console.log(this.deneme1.arrayDeneme.sayilar);
     },
 }
 
