@@ -7,8 +7,14 @@ import deneme from "../deneme.js";
 const carData = ref(data);
 const deneme1 = ref(deneme);
 
-watch(addValueToDeneme1Array, async ()=>{
-   await console.log(deneme1.value.arrayDeneme.sayilar);
+
+const addValueToDeneme1Array = () => {
+    deneme1.value.arrayDeneme.sayilar.push("sayi");
+    console.log("kendim de çalışırım");
+}
+
+watch(addValueToDeneme1Array, () => {
+    console.log(deneme1.value.arrayDeneme.sayilar);
 });
 
 onMounted(
@@ -17,20 +23,20 @@ onMounted(
     }
 );
 
-function addValueToDeneme1Array() {
-    deneme1.value.arrayDeneme.sayilar.push("sayi")
-}
+
 
 
 </script>
 
 <template>
-    <div>
-        <h1>deneme</h1>
+    <div style="text-align: center;">
+        <h1>Cars</h1>
         <ul>
+            <h3>Arabalar</h3>
+
             <li v-for="car in carData" :key="car.id">
                 <ul>
-                    <h3>Arabalar</h3>
+
                     <li>marka: {{ car.marka }}</li>
                     <li>model: {{ car.model }}</li>
                     <li>yaş: {{ car.yas }}</li>
