@@ -1,21 +1,26 @@
-<script>
+<script setup>
+import { ref, watch } from "vue";
+import { onMounted } from "vue";
 import data from "../data/data.json"
 import deneme from "../deneme.js";
 
+const carData = ref(data);
+const deneme1 = ref(deneme);
 
+watch(addValueToDeneme1Array, async ()=>{
+   await console.log(deneme1.value.arrayDeneme.sayilar);
+});
 
-export default {
-    data() {
-        return {
-            carData: data,
-            deneme1: deneme,
-            
-        }
-    },
-    mounted() {
-        console.log(this.deneme1.arrayDeneme.sayilar);
-    },
+onMounted(
+    () => {
+        console.log(deneme1.value.arrayDeneme.sayilar)
+    }
+);
+
+function addValueToDeneme1Array() {
+    deneme1.value.arrayDeneme.sayilar.push("sayi")
 }
+
 
 </script>
 
@@ -36,8 +41,8 @@ export default {
     </div>
 
     <!-- xxxxxxxxxx  Bu kısımda başka bir json dosyasına data göndermek istedim. yapamadım. daha sonra tekrar geleceğim. -->
-     <button @click="addValue">Add Value</button>
-
+    <p>{{ deneme1.arrayDeneme.sayilar }}</p>
+    <button @click="addValueToDeneme1Array">add</button>
 </template>
 
 
