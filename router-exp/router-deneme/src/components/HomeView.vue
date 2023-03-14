@@ -1,6 +1,6 @@
 <script>
 import JSConfetti from 'js-confetti';
-
+import VanillaTilt from 'vanilla-tilt';
 
 
 export default {
@@ -8,7 +8,7 @@ export default {
         return {
             onOf: false,
             deneme: {
-                dene: '<img style="width: 50%;"  src="https://wallpapers.com/images/hd/dark-anime-gothic-girl-k1uj3cr7kr9a96nx.jpg" alt="">',
+                dene: '<img style="width: 50%;"  src="https://wallpapers.com/images/hd/dark-anime-gothic-girl-k1uj3cr7kr9a96nx.jpg" alt="" id="tilt">',
             }
 
         }
@@ -24,7 +24,15 @@ export default {
                 emojiSize: 10,
             });
         }
-    }
+    },
+    mounted() {
+        VanillaTilt.init(document.querySelector("#tilt"),{
+            max: 25,
+            speed: 400,
+            perspective: 2000,
+            scale: 2 
+        })
+    },
 }
 
 </script>
